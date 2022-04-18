@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fragmentation(a, b, n) {
+            let aFraction = Math.round(a % 1 * Math.pow(10, n));
+            let bFraction = Math.round(b % 1 * Math.pow(10, n));
+            console.log(`Дробная часть... 
+        числа a = ${aFraction}; 
+        числа b = ${bFraction};
+        `);
+
+            console.log("Дробные части равны:", aFraction === bFraction);
+            console.log("Дробная часть a > b:", aFraction > bFraction);
+            console.log("Дробная часть a < b:", aFraction < bFraction);
+        };
+
+        fragmentation(13.123456789, 2.123, 5);
+        fragmentation(13.890123, 2.891564, 2);
+        fragmentation(13.890123, 2.891564, 3);
+    </script>
+</body>
+
+</html>
