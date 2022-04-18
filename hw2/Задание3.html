@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = 2, m = 2; //такой вариант диапазона "ломает" программу, т.к. между 2 и 2 нет
+        //нечетных чисел. Но не вижу варианта, как это решить без ветвления
+        let greaterValue = Math.max(m, n);
+        let lowerValue = Math.min(m, n);
+        let random = Math.floor(Math.random() * (greaterValue - lowerValue + 1) + lowerValue);
+        let odd = random + (1 - Math.abs(random % 2));
+        console.log(odd);
+    </script>
+</body>
+
+</html>
