@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkPass(string) {
+            let message =
+                (string.length >= 4 && (string.includes('-') || (string.includes('_')))) ?
+                    `Пароль ${string} корректен` : `Пароль ${string} некорректен`;
+            console.log(message);
+            /*
+            if (string.length >= 4 && (string.includes('-') || string.includes('_'))) {
+                console.log(`Пароль ${string} корректен`)
+            } else {
+                console.log(`Пароль ${string} некорректен`)
+            }
+            */
+        };
+        checkPass("1234-");
+        checkPass("4321_");
+        checkPass("qaz-xsw");
+        checkPass("_zxd");
+        checkPass("_-a");
+        checkPass("qaz");
+        checkPass("_-3");
+        checkPass("123456789");
+    </script>
+</body>
+
+</html>
